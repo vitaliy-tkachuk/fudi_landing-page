@@ -8,20 +8,20 @@
 
 Responsive layout of Fudi landing page designed by [Kristijan Binski](https://www.behance.net/gallery/16951129/FREE-PSD-Multipurpose-Landing-Page) and coded by me.
 
-Live Demo: https://vitfl.github.io/web-layouts/fudi/dist
+Live Demo: https://vitfl.github.io/fudi_landing-page/
 
 Used technologies:
 
-* HTML 5, CSS 3, Bootstrap 4 grid, JavaScript, jQuery
-* Additional libraries: [Animate.css](https://github.com/daneden/animate.css), [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/), [Hamburgers](https://jonsuh.com/hamburgers/), [jquery.mmenu](http://mmenu.frebsite.nl/), [jquery.inview](https://github.com/protonet/jquery.inview) 
-* Boilerplate: [Webpack 4 + Bootstrap 4 Grid + JQuery Boilerplate](https://github.com/VitFL/webpack4-bootstrap-jquery-boilerplate)
+- HTML 5, CSS 3, Bootstrap 4 grid, JavaScript, jQuery
+- Additional libraries: [Animate.css](https://github.com/daneden/animate.css), [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/), [Hamburgers](https://jonsuh.com/hamburgers/), [jquery.mmenu](http://mmenu.frebsite.nl/), [jquery.inview](https://github.com/protonet/jquery.inview)
+- Boilerplate: [Webpack 4 + Bootstrap 4 Grid + JQuery Boilerplate](https://github.com/VitFL/webpack4-bootstrap-jquery-boilerplate)
 
-Used tools: 
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Avocode](https://avocode.com/)
+Used tools:
 
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Avocode](https://avocode.com/)
 
-Folder structure: 
+Folder structure:
 
-* **dist** - compiled and minified distribution version.
-* **src** - source files: fonts, images, js, sass etc.
+- **dist** - compiled and minified distribution version.
+- **src** - source files: fonts, images, js, sass etc.

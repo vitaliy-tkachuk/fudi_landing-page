@@ -1,0 +1,28 @@
+$default-font: "lato-font", sans-serif;
+$accent: #f57365;
+$text: #333740;
+$dark: #000;
+$light: #fff;
+
+// Customization of Bootstrap vars
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;
+
+
+
+// Customization of Hamburger vars
+
+$hamburger-padding-x           : 10px;
+$hamburger-padding-y           : 10px;
+$hamburger-layer-width         : 24px;
+$hamburger-layer-height        : 2px;
+$hamburger-layer-spacing       : 4px;
+$hamburger-layer-color         : #fff;
+$hamburger-layer-border-radius : 4px;
+$hamburger-hover-opacity       : 0.7;
+$hamburger-active-layer-color  : $hamburger-layer-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;

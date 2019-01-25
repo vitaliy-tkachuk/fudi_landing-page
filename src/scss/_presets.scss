@@ -1,0 +1,104 @@
+/*
+===========================================================
+	Div Position
+===========================================================
+*/
+
+.inline-block {
+	display: inline-block;
+}
+.inline {
+	display: inline;
+}
+.block {
+	display: block;
+}
+.absolute {
+	position: absolute;
+}
+.absolute_bottom {
+	bottom: 0;
+}
+.top {
+	top: 0;
+}
+.bottom {
+	bottom: 0;
+}
+.right {
+	right: 0;
+}
+.left {
+	left: 0;
+}
+.float_right {
+	float: right;
+}
+.float_left {
+	float: left;
+}
+
+
+/*
+===========================================================
+	Text Transform
+===========================================================
+*/
+
+.lowercase {
+	text-transform: lowercase;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+
+
+
+/*
+===========================================================
+	Animation delay
+===========================================================
+*/
+.delay-100 {
+	-webkit-animation-delay: 100ms;
+	-moz-animation-delay: 100ms;
+	-ms-animation-delay: 100ms;
+	-o-animation-delay: 100ms;
+	animation-delay: 100ms;
+}
+
+.delay-200 {
+	-webkit-animation-delay: 200ms;
+	-moz-animation-delay: 200ms;
+	-ms-animation-delay: 200ms;
+	-o-animation-delay: 200ms;
+	animation-delay: 200ms;
+}
+
+.delay-300 {
+	-webkit-animation-delay: 300ms;
+	-moz-animation-delay: 300ms;
+	-ms-animation-delay: 300ms;
+	-o-animation-delay: 300ms;
+	animation-delay: 300ms;
+}
+
+.delay-400 {
+	-webkit-animation-delay: 400ms;
+	-moz-animation-delay: 400ms;
+	-ms-animation-delay: 400ms;
+	-o-animation-delay: 400ms;
+	animation-delay: 400ms;
+}
+
+.delay-500 {
+	-webkit-animation-delay: 500ms;
+	-moz-animation-delay: 500ms;
+	-ms-animation-delay: 500ms;
+	-o-animation-delay: 500ms;
+	animation-delay: 500ms;
+}

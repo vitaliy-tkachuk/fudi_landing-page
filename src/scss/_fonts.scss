@@ -1,0 +1,22 @@
+@import "_mixins/font-face";
+
+@include font-face("lato-font-hairline", "../fonts/Lato-Hairline/Lato-Hairline");
+@include font-face("lato-font-hairlineItalic", "../fonts/Lato-HairlineItalic/Lato-HairlineItalic");
+@include font-face("lato-font-light", "../fonts/Lato-Light/Lato-Light");
+@include font-face("lato-font-regular", "../fonts/Lato-Regular/Lato-Regular");
+@include font-face("lato-font-bold", "../fonts/Lato-Bold/Lato-Bold");
+@include font-face("times-new-roman-ps-boldItalic", "../fonts/TimesNewRomanPS-BoldItalic/TimesNewRomanPS-BoldItalic");
+
+// Common weight name mapping
+// The numerical values 100 to 900 roughly correspond to the following common weight names:
+
+// Value	Common weight name
+// 100	Thin (Hairline)
+// 200	Extra Light (Ultra Light)
+// 300	Light
+// 400	Normal
+// 500	Medium
+// 600	Semi Bold (Demi Bold)
+// 700	Bold
+// 800	Extra Bold (Ultra Bold)
+// 900	Black (Heavy)

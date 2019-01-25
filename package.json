@@ -1,0 +1,68 @@
+{
+  "name": "webpack4-bootstrap4-jquery-boilerplate",
+  "version": "1.0.0",
+  "description": "Webpack4 + Bootstrap 4 Grid + Jquery boilerplate",
+  "main": "src/js/app.js",
+  "scripts": {
+    "dev": "webpack-dev-server --watch --host localhost --mode development",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "author": "VitFL",
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "bootstrap": "^4.1.3",
+    "hamburgers": "^1.1.3",
+    "jquery": "^3.3.1",
+    "jquery-inview": "^1.1.2",
+    "jquery.mmenu": "^7.2.1",
+    "owl.carousel": "^2.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-html": "^4.0.6",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jquery": "^1.3.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "gh-pages": "^2.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "lint-staged": "^7.3.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "prettier": "^1.14.3",
+    "prettier-package-json": "^2.0.1",
+    "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "lint-staged": {
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

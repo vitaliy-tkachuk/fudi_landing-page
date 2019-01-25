@@ -1,0 +1,438 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "presets";
+@import "_mixins/reset";
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: #000;
+	color: #fff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	opacity: 1;
+	color: $text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+//Preloader BEGIN
+.preloader {
+	position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #363636;
+  /* change if the mask should have another color then white */
+  z-index: 1000;
+  /* makes sure it stays on top */
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity = $opacity);
+}
+
+.pulse {
+  position: relative;
+  left: 50%;
+  top: 50vh;
+  margin: {
+    left: -40px;
+    top: -40px;
+  };
+  &:before, &:after {
+    content: "";
+    border: 5px solid $accent;
+    width: 80px;
+    height: 80px;
+    border-radius: 500px;
+    position: absolute;
+  }
+  &:before {
+    animation: pulse-outer 0.8s ease-in infinite;
+  }
+  &:after {
+    animation: pulse-inner 0.8s linear infinite;
+  }
+}
+
+@keyframes pulse-outer {
+  0% {
+    @include opacity(100);
+  }
+  50% {
+    @include opacity(50);
+  }
+  100% {
+    @include opacity(0);
+  }
+}
+
+
+@keyframes pulse-inner {
+  0% {
+    transform: scale(0);
+    @include opacity(0);
+  }
+  100% {
+    transform: scale(1);
+    @include opacity(100);
+  }
+}
+
+//Preloader END
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+p {
+	font-family: 'lato-font-light', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+b, strong {
+	font-weight: bold;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+h2,.h2 {
+	font-family: 'lato-font-bold', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 30px;
+	text-transform: uppercase;
+	margin: 0 0 18px;
+	// makes a short line below h2
+	&::after {
+		content: ""; /* This is necessary for the pseudo element to work. */ 
+		display: block; /* This will put the pseudo element on its own line. */
+		width: 88px; /* Change this to whatever width you want. */
+		padding-top: 5px; /* This creates some space between the element and the border. */
+		margin: 0 auto; /* This will center the border. */
+		border-bottom: 1px solid $accent; /* This creates the border. Replace black with whatever color you want. */
+	}
+}
+
+h3, .h3 {
+	color: $light;
+	font-family: 'lato-font-bold', sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 26px;
+	text-transform: uppercase;
+}
+	section, header {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.dark-bg {
+	background: #000;
+}
+
+.nav-wrap {
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+}
+.main-nav {	.h2 {
+	margin: 0 0 24px;
+}
+	padding: 32px 0 0 0;
+
+	#login, #signup {
+		@include button-reset;
+		color: #fff;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-family: 'lato-font-bold';
+		font-weight: 700;
+		margin-right: 25px;
+		font-size: 18px;
+
+	}
+}
+
+#section-header{
+	position: relative;
+	background-image: url('../img/header.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat:no-repeat;
+	height: 100vh;
+	background-color: $dark;
+	color: #fff; 
+}
+
+.header-composition {
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	p {
+		margin: 0;
+		&:first-of-type {
+		font-family: 'times-new-roman-ps-boldItalic', 'Times New Roman', serif;
+		font-weight: 700;
+		font-size: 36px;
+		opacity: 0.7;
+		text-shadow: -1px 1px 40px rgba(1, 1, 1, 0.55);	
+		}
+		&:last-of-type {
+			font-family: 'lato-font-regular', sans-serif;
+			font-weight: 400;
+			text-transform: uppercase;
+			> span {
+				font-weight: 700;
+				text-decoration: underline;
+			}
+		}
+	}
+	.h1 {
+		font-family: 'lato-font-bold', sans-serif;
+		font-weight: 700;
+		font-size: 100px;
+		line-height: 1;
+		margin: 0 0 24px;
+	}
+
+	.button-get-started {
+		display: inline-block;
+		color: $light;
+		text-decoration: none;
+		border: 2px solid $light;
+		border-radius: 2px;
+		padding: 20px 80px;
+		margin: 0 0 24px;
+		font-family: 'lato-font-bold', serif;
+		font-size: 18px;
+		font-weight: 700;
+		transition: border-color 0.1s ease;
+		cursor: pointer;
+			&:focus, &:hover {
+				text-decoration: none;
+				color: $light;
+			 }
+			&:hover {
+				border-color: rgba(255,255,255, 0.65);
+				color: rgba(255,255,255, 0.65);
+			}
+			&:active {
+				border-color: rgba(255,255,255, 0.45);
+			}
+	}
+}
+#section-motivation {
+	overflow: hidden;
+	padding: 70px 0 70px 0;
+}
+.motivation-composition {
+	padding: 15px 0;
+	.img-circle {
+		display: inline-block;
+		height: 107px;
+		width: 107px;
+		margin: 0 0 20px 0;
+		border:2px solid $dark;
+		border-radius: 100%;
+		img {
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+	}
+}
+
+#section-introducing {
+	padding: 85px 0 0 0;
+	background-color: #f7f7f7;
+	.h2::after{
+		margin: 0; /*This will override center position of .h2 border*/
+	}
+	.iphone-app {
+		img {
+			max-width: 423px;
+		}
+	}
+	
+}
+
+#section-testimonials {
+	padding: 85px 0;
+	background-color: #4a3949;
+	background-image: url('../img/testimonials-bg.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat:no-repeat;
+}
+
+
+.owl-carousel .owl-item img {
+	display: inline-block;
+	width: 104px;
+	height: 104px;
+	border: 5px solid #948b94;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.testimonials-composition {
+	p {
+		color: #ffffff;
+	  font-size: 30px;
+	 	font-weight: 400;
+		font-family: "lato-font-hairline", serif;
+	}
+	span {
+		color: #ffffff;
+		font-size: 18px;
+		font-family: 'lato-font-hairline';
+		font-style: italic;
+		font-weight: 100;
+		&::before, &::after {
+			content: " - "
+		}
+	}
+	
+}
+
+#section-browse-by-cuisines {
+	padding: 85px 0 0 0;
+	.h2 {
+		margin-bottom: 40px;
+	}
+	.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+}
+	.cuisine-info {
+		overflow: hidden;
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+		padding: 15px 0;	
+	}
+.cuisine-composition {
+	&:hover img {
+		opacity: 0.5;
+	}
+	display: block;
+	img {
+		width: 100%;
+		height: auto;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+		-o-transition: opacity .5s ease-out;
+		filter: brightness(1.01); // fixing image jiggle on hover
+	}
+	p {
+		margin-bottom: 8px;
+		opacity: 0.9;
+		color: $light;
+		font-family:'times-new-roman-ps-boldItalic', serif;
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
+	p, .h3 {
+
+		transition: all .2s ease-in;
+	}
+}
+
+#section-statistics {
+	padding: 40px 0;
+	div[class^="col-"] {
+		padding: 10px 0;
+	}
+	.h3 {
+		color: $dark;
+		line-height: 30px;
+	}
+	p {
+		margin: 10px 0 0 0;
+	}
+}
+
+footer {
+	background-color: #f7f7f7;
+	border-top: 1px solid darken(#f7f7f7, 10%);
+	padding: 40px 0;
+	p {
+		margin-bottom: 0;
+	}
+	div[class^="col-"]:nth-child(2) {
+		text-align: right;
+	}
+	
+}
+
+
+
+
+
+
+@import "media"; // Always at the end

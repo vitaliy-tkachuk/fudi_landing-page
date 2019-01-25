@@ -1,0 +1,148 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .hamburger--collapse .hamburger-inner::after {
+    top: -10px;
+  } 
+  
+  .hamburger-inner::before {
+    top: -5px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 20px;
+}
+
+  .main-nav {
+    #login, #signup {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  .header-composition {
+  	p {
+      &:first-of-type {
+      font-size: 26px;
+      }
+      &:last-of-type {
+        font-size: 12px;
+        > span {
+          font-size: 12px;
+        }
+      }
+    }
+    .h1 {
+      font-size: 60px;
+      margin: 0 0 16px;
+    }
+    .button-get-started {
+      padding: 14px 60px;
+      font-size: 12px;
+      margin: 0 0 16px;
+    }
+  }
+
+  #section-motivation {
+    padding: 60px 0;
+  }
+  #section-introducing {
+    padding: 75px 0;
+  }
+  #section-testimonials {
+    padding: 75px 0;
+    p {
+      font-size: 22px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+  #section-browse-by-cuisines {
+    padding: 75px 0 0 0;
+  }
+
+  #section-statistics {
+    padding: 60px 0;
+    .h3 {
+      color: $dark;
+      line-height: 30px;
+    }
+    p {
+      margin: 10px 0 0 0;
+    }
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+  // Disabling parallax effect on mobile devices
+  #section-header {
+    background-attachment: initial;
+  }  
+  // Disabling animation effects on mobile devices
+  .hidden {
+    visibility: visible;
+  }
+  .animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+  }
+  
+  footer {
+    p {
+      text-align: center;
+    }
+  }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
